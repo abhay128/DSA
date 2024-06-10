@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class SinglyLinkedList {
 
     ListNode head;
@@ -113,7 +115,7 @@ Sample main function
 
 public static void main(String[] args) {
 
-    SinglyLinkedList sll = new SinglyLinkedList();
+    LinkedList.SinglyLinkedList sll = new LinkedList.SinglyLinkedList();
     sll.addAtHead(1);
     sll.addAtTail(3);
     sll.addAtIndex(1,2);
