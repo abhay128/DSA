@@ -1,3 +1,4 @@
+import LinkedList.CircularLinkedList;
 import LinkedList.DoublyLinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -5,27 +6,22 @@ import LinkedList.DoublyLinkedList;
 public class Main {
     public static void main(String[] args) {
 
-        DoublyLinkedList sll = new DoublyLinkedList();
-        sll.addAtHead(1);
-        sll.addAtHead(2);
-        sll.addAtHead(3);
+        CircularLinkedList cll = new CircularLinkedList();
+        cll.addAtHead(1);
+        cll.addAtHead(2);
+        cll.addAtHead(3);
 
+        cll.addAtTail(4);
 
-        sll.addAtTail(4);
+        cll.display();
 
-        sll.addAtIndex(1,7);
+        cll.deleteAtHead();
 
-        sll.addAtIndex(0,0);
-//
-        sll.addAtIndex(8,6);
+        cll.display();
 
+        cll.deleteAtTail();
 
-
-        sll.display();
-
-        System.out.println("value at index 3 is : " + sll.get(3));
-
-
+        cll.display();
 
     }
 }
