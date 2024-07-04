@@ -1,13 +1,14 @@
 
 import Stacks.StackUsingDynamicArray;
 import Stacks.StackUsingFixedSizeArray;
+import Stacks.StackUsingSinglyLinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         int stackCapacity = 1;
-        StackUsingDynamicArray stack = new StackUsingDynamicArray(stackCapacity);
+        StackUsingSinglyLinkedList stack = new StackUsingSinglyLinkedList();
         stack.display();
         System.out.println("Stack size : " + stack.size());
         System.out.println("Stack is empty : " + stack.isEmpty());
@@ -16,8 +17,6 @@ public class Main {
         stack.push(1);
         stack.display();
         System.out.println("Stack size : " + stack.size());
-
-
 
         stack.push(2);
         stack.display();
@@ -45,10 +44,10 @@ public class Main {
         System.out.println("Stack size : " + stack.size());
         System.out.println("Stack is empty : " + stack.isEmpty());
         System.out.println("Stack is full : " + stack.isFull());
-
-        stack.push(6);
-        stack.display();
-
+//
+//        stack.push(6);
+//        stack.display();
+//
         stack.pop();
         stack.display();
         System.out.println("Stack top : " + stack.top());
