@@ -1,71 +1,84 @@
 
-import Stacks.StackUsingDynamicArray;
-import Stacks.StackUsingFixedSizeArray;
-import Stacks.StackUsingSinglyLinkedList;
+import Queue.CircularQueueUsingArray;
+import Queue.LinearQueueUsingArray;
+import Queue.LinearQueueUsingLinkedList;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int stackCapacity = 1;
-        StackUsingSinglyLinkedList stack = new StackUsingSinglyLinkedList();
-        stack.display();
-        System.out.println("Stack size : " + stack.size());
-        System.out.println("Stack is empty : " + stack.isEmpty());
-        System.out.println("Stack is full : " + stack.isFull());
 
-        stack.push(1);
-        stack.display();
-        System.out.println("Stack size : " + stack.size());
+        LinearQueueUsingLinkedList queue = new LinearQueueUsingLinkedList();
+        queue.display();
+        
+//        System.out.println("queue is empty : " + queue.isEmpty());
+//        System.out.println("queue is full : " + queue.isFull());
 
-        stack.push(2);
-        stack.display();
-        System.out.println("Stack size : " + stack.size());
+        queue.enQueue(1);
+//        queue.display();
+//        System.out.println("queue size : " + queue.size());
+
+        queue.enQueue(2);
+//        queue.display();
+//        System.out.println("queue size : " + queue.size());
 
 
-        stack.push(3);
+        queue.enQueue(3);
 
-        stack.display();
-        System.out.println("Stack size : " + stack.size());
-
-        stack.display();
-
-        System.out.println("Stack top : " + stack.top());
-        System.out.println("Stack size : " + stack.size());
-        System.out.println("Stack is empty : " + stack.isEmpty());
-        System.out.println("Stack is full : " + stack.isFull());
-
-        stack.push(4);
-        stack.push(5);
-
-        stack.display();
-
-        System.out.println("Stack top : " + stack.top());
-        System.out.println("Stack size : " + stack.size());
-        System.out.println("Stack is empty : " + stack.isEmpty());
-        System.out.println("Stack is full : " + stack.isFull());
+//        queue.display();
+//        System.out.println("queue size : " + queue.size());
 //
-//        stack.push(6);
-//        stack.display();
+//        queue.display();
 //
-        stack.pop();
-        stack.display();
-        System.out.println("Stack top : " + stack.top());
-        System.out.println("Stack size : " + stack.size());
-        System.out.println("Stack is empty : " + stack.isEmpty());
-        System.out.println("Stack is full : " + stack.isFull());
+//        System.out.println("queue Front : " + queue.Front());
+//        System.out.println("queue Rear : " + queue.Rear());
+//        System.out.println("queue size : " + queue.size());
+//        System.out.println("queue is empty : " + queue.isEmpty());
+//        System.out.println("queue is full : " + queue.isFull());
 
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        stack.pop();
+        queue.enQueue(4);
+        queue.enQueue(5);
 
-        System.out.println("Stack top : " + stack.top());
-        System.out.println("Stack size : " + stack.size());
-        System.out.println("Stack is empty : " + stack.isEmpty());
-        System.out.println("Stack is full : " + stack.isFull());
+        queue.display();
 
-        stack.pop();
+//        System.out.println("queue Front : " + queue.Front());
+//        System.out.println("queue Rear : " + queue.Rear());
+//        System.out.println("queue size : " + queue.size());
+//        System.out.println("queue is empty : " + queue.isEmpty());
+//        System.out.println("queue is full : " + queue.isFull());
+//
+//        queue.enQueue(6);
+//        queue.display();
+//
+        queue.deQueue();
+        queue.display();
+//        System.out.println("queue Front : " + queue.Front());
+//        System.out.println("queue Rear : " + queue.Rear());
+//        System.out.println("queue size : " + queue.size());
+//        System.out.println("queue is empty : " + queue.isEmpty());
+//        System.out.println("queue is full : " + queue.isFull());
+
+//        queue.deQueue();
+//       queue.deQueue();
+        queue.deQueue();
+        queue.deQueue();
+        queue.display();
+
+        System.out.println("queue Front : " + queue.Front());
+        System.out.println("queue Rear : " + queue.Rear());
+        System.out.println("queue size : " + queue.size());
+
+        queue.deQueue();
+        queue.deQueue();
+        queue.display();
+
+        System.out.println("queue is empty : " + queue.isEmpty());
+
+
+        queue.deQueue();
+        queue.enQueue(5);
+
+        queue.display();
 
     }
 }
