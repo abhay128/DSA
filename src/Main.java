@@ -1,84 +1,60 @@
-
-import Queue.CircularQueueUsingArray;
-import Queue.LinearQueueUsingArray;
-import Queue.LinearQueueUsingLinkedList;
+import Trees.BinaryTreeUsingLinkedList;
+import Trees.TreeNode;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        LinearQueueUsingLinkedList queue = new LinearQueueUsingLinkedList();
-        queue.display();
-        
-//        System.out.println("queue is empty : " + queue.isEmpty());
-//        System.out.println("queue is full : " + queue.isFull());
+        BinaryTreeUsingLinkedList binaryTree = new BinaryTreeUsingLinkedList();
+        TreeNode treeNode1 = new TreeNode();
+        treeNode1.value = "1";
+        TreeNode treeNode2 = new TreeNode();
+        treeNode2.value = "2";
+        TreeNode treeNode3 = new TreeNode();
+        treeNode3.value = "3";
+        TreeNode treeNode4 = new TreeNode();
+        treeNode4.value = "4";
+        TreeNode treeNode5 = new TreeNode();
+        treeNode5.value = "5";
+        TreeNode treeNode6 = new TreeNode();
+        treeNode6.value = "6";
+        TreeNode treeNode7 = new TreeNode();
+        treeNode7.value = "7";
+        TreeNode treeNode8 = new TreeNode();
+        treeNode8.value = "8";
+        TreeNode treeNode9 = new TreeNode();
+        treeNode9.value = "9";
+        TreeNode treeNode10 = new TreeNode();
+        treeNode10.value = "10";
 
-        queue.enQueue(1);
-//        queue.display();
-//        System.out.println("queue size : " + queue.size());
+        treeNode1.left = treeNode2;
+        treeNode1.right = treeNode3;
 
-        queue.enQueue(2);
-//        queue.display();
-//        System.out.println("queue size : " + queue.size());
+        treeNode2.left = treeNode4;
+        treeNode2.right = treeNode5;
 
+        treeNode3.left = treeNode6;
+        treeNode3.right = treeNode7;
 
-        queue.enQueue(3);
+        treeNode4.left = treeNode8;
 
-//        queue.display();
-//        System.out.println("queue size : " + queue.size());
-//
-//        queue.display();
-//
-//        System.out.println("queue Front : " + queue.Front());
-//        System.out.println("queue Rear : " + queue.Rear());
-//        System.out.println("queue size : " + queue.size());
-//        System.out.println("queue is empty : " + queue.isEmpty());
-//        System.out.println("queue is full : " + queue.isFull());
+        treeNode6.left = treeNode9;
+        treeNode6.right = treeNode10;
 
-        queue.enQueue(4);
-        queue.enQueue(5);
+        binaryTree.root = treeNode1;
 
-        queue.display();
+        System.out.println("Inorder Traversal : " );
+        binaryTree.inorderTraversal(binaryTree.root);
 
-//        System.out.println("queue Front : " + queue.Front());
-//        System.out.println("queue Rear : " + queue.Rear());
-//        System.out.println("queue size : " + queue.size());
-//        System.out.println("queue is empty : " + queue.isEmpty());
-//        System.out.println("queue is full : " + queue.isFull());
-//
-//        queue.enQueue(6);
-//        queue.display();
-//
-        queue.deQueue();
-        queue.display();
-//        System.out.println("queue Front : " + queue.Front());
-//        System.out.println("queue Rear : " + queue.Rear());
-//        System.out.println("queue size : " + queue.size());
-//        System.out.println("queue is empty : " + queue.isEmpty());
-//        System.out.println("queue is full : " + queue.isFull());
+        System.out.println("\n" +"Preorder Traversal : " );
+        binaryTree.preorderTraversal(binaryTree.root);
 
-//        queue.deQueue();
-//       queue.deQueue();
-        queue.deQueue();
-        queue.deQueue();
-        queue.display();
+        System.out.println("\n" +"Postorder Traversal : " );
+        binaryTree.postorderTraversal(binaryTree.root);
 
-        System.out.println("queue Front : " + queue.Front());
-        System.out.println("queue Rear : " + queue.Rear());
-        System.out.println("queue size : " + queue.size());
-
-        queue.deQueue();
-        queue.deQueue();
-        queue.display();
-
-        System.out.println("queue is empty : " + queue.isEmpty());
-
-
-        queue.deQueue();
-        queue.enQueue(5);
-
-        queue.display();
+        System.out.println("\n" +"Level Order Traversal : " );
+        binaryTree.levelorderTraversal(binaryTree.root);
 
     }
 }
