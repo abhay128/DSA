@@ -58,4 +58,25 @@ public class BinaryTreeUsingLinkedList {
 
     }
 
+    public void search(String value){                           //Time Complexity : O(n) , Space Complexity: O(n)
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        while(!queue.isEmpty()){
+            TreeNode presentNode = queue.remove();
+            if(presentNode.value == value){
+                System.out.println("The value - " + value + " is present in the tree");
+                return;
+            }else{
+                if(presentNode.left != null){
+                    queue.add(presentNode.left);
+                }
+                if(presentNode.right != null){
+                    queue.add(presentNode.right);
+                }
+            }
+        }
+        System.out.println("The value - " + value + " is not present in the tree");
+    }
+
 }

@@ -44,6 +44,9 @@ public class Main {
 
         binaryTree.root = treeNode1;
 
+
+        System.out.println("\n");
+
         System.out.println("Inorder Traversal : " );
         binaryTree.inorderTraversal(binaryTree.root);
 
@@ -55,6 +58,13 @@ public class Main {
 
         System.out.println("\n" +"Level Order Traversal : " );
         binaryTree.levelorderTraversal(binaryTree.root);
+
+        System.out.println("\n\n");
+        binaryTree.search("1");
+        binaryTree.search("4");
+        binaryTree.search("10");
+        binaryTree.search("15");
+
 
     }
 }
