@@ -28,6 +28,9 @@ public class Main {
         TreeNode treeNode10 = new TreeNode();
         treeNode10.value = "10";
 
+        TreeNode treeNode11 = new TreeNode();
+        treeNode11.value = "11";
+
         treeNode1.left = treeNode2;
         treeNode1.right = treeNode3;
 
@@ -42,7 +45,11 @@ public class Main {
         treeNode6.left = treeNode9;
         treeNode6.right = treeNode10;
 
+       // treeNode5.left = treeNode11;
+
         binaryTree.root = treeNode1;
+
+
 
 
         System.out.println("\n");
@@ -64,6 +71,21 @@ public class Main {
         binaryTree.search("4");
         binaryTree.search("10");
         binaryTree.search("15");
+        System.out.println("\n\n");
+
+        //binaryTree.insertNode("20");
+        binaryTree.deleteNode("50");
+        binaryTree.deleteNode("3");
+
+        System.out.println("\n" +"Level Order Traversal : " );
+        binaryTree.levelorderTraversal(binaryTree.root);
+
+        binaryTree.deleteNode("1");
+
+        System.out.println("\n" +"Level Order Traversal : " );
+        binaryTree.levelorderTraversal(binaryTree.root);
+
+        binaryTree.deleteBinaryTree();
 
 
     }
