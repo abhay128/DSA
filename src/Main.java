@@ -1,3 +1,4 @@
+import Trees.BinaryTreeUsingArray;
 import Trees.BinaryTreeUsingLinkedList;
 import Trees.TreeNode;
 
@@ -6,7 +7,7 @@ import Trees.TreeNode;
 public class Main {
     public static void main(String[] args) {
 
-        BinaryTreeUsingLinkedList binaryTree = new BinaryTreeUsingLinkedList();
+        BinaryTreeUsingLinkedList binaryTreeUsingLinkedList = new BinaryTreeUsingLinkedList();
         TreeNode treeNode1 = new TreeNode();
         treeNode1.value = "1";
         TreeNode treeNode2 = new TreeNode();
@@ -45,47 +46,14 @@ public class Main {
         treeNode6.left = treeNode9;
         treeNode6.right = treeNode10;
 
-       // treeNode5.left = treeNode11;
-
-        binaryTree.root = treeNode1;
-
-
-
+        binaryTreeUsingLinkedList.root = treeNode1;
 
         System.out.println("\n");
 
-        System.out.println("Inorder Traversal : " );
-        binaryTree.inorderTraversal(binaryTree.root);
+        int size = 5;
+        BinaryTreeUsingArray binaryTreeUsingArray = new BinaryTreeUsingArray(size);
 
-        System.out.println("\n" +"Preorder Traversal : " );
-        binaryTree.preorderTraversal(binaryTree.root);
 
-        System.out.println("\n" +"Postorder Traversal : " );
-        binaryTree.postorderTraversal(binaryTree.root);
-
-        System.out.println("\n" +"Level Order Traversal : " );
-        binaryTree.levelorderTraversal(binaryTree.root);
-
-        System.out.println("\n\n");
-        binaryTree.search("1");
-        binaryTree.search("4");
-        binaryTree.search("10");
-        binaryTree.search("15");
-        System.out.println("\n\n");
-
-        //binaryTree.insertNode("20");
-        binaryTree.deleteNode("50");
-        binaryTree.deleteNode("3");
-
-        System.out.println("\n" +"Level Order Traversal : " );
-        binaryTree.levelorderTraversal(binaryTree.root);
-
-        binaryTree.deleteNode("1");
-
-        System.out.println("\n" +"Level Order Traversal : " );
-        binaryTree.levelorderTraversal(binaryTree.root);
-
-        binaryTree.deleteBinaryTree();
 
 
     }
