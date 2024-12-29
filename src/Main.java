@@ -44,6 +44,7 @@ public class Main {
         System.out.println("\n Level-Order Traversal : ");
         binaryTreeUsingArray.levelOrderTraversal();
 
+        binaryTreeUsingArray.deleteTree();
 
     }
 }

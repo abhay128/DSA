@@ -88,4 +88,13 @@ public class BinaryTreeUsingArray {
             System.out.println("\n The node successfully deleted");
         }
     }
+
+    public void deleteTree(){                               //Time Complexity : O(1) , Space Complexity: O(1)
+        try{
+            binaryTreeArray = null;
+            System.out.println("\n The Binary tree has been succesfully deleted.");
+        }catch(Exception e){
+            System.out.println("\n There was an error deleting the Binary Tree.");
+        }
+    }
 }
