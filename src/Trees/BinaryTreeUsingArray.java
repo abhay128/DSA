@@ -33,4 +33,37 @@ public class BinaryTreeUsingArray {
             System.out.println("The Binary Tree is full");
         }
     }
+
+    public void preOrderTraversal(int index){                   //Time Complexity : O(N) , Space Complexity: O(N)
+        if(index > lastUsedIndex){
+            return;
+        }
+        System.out.print(binaryTreeArray[index] + " ");                 // Root                     O(1)
+        preOrderTraversal(index * 2);                             // Left Child               O(N/2)
+        preOrderTraversal(index * 2 + 1);                         // Right Child              O(N/2)
+    }
+
+    public void inOrderTraversal(int index){                   //Time Complexity : O(N) , Space Complexity: O(N)
+        if(index > lastUsedIndex){
+            return;
+        }
+        inOrderTraversal(index * 2);                             // Left Child
+        System.out.print(binaryTreeArray[index] + " ");                // Root
+        inOrderTraversal(index * 2 + 1);                         // Right Child
+    }
+
+    public void postOrderTraversal(int index){                   //Time Complexity : O(N) , Space Complexity: O(N)
+        if(index > lastUsedIndex){
+            return;
+        }
+        postOrderTraversal(index * 2);                             // Left Child
+        postOrderTraversal(index * 2 + 1);                         // Right Child
+        System.out.print(binaryTreeArray[index] + " ");                  // Root
+    }
+
+    public void levelOrderTraversal(){                          //Time Complexity : O(N) , Space Complexity: O(1)
+        for(int i=1; i <=lastUsedIndex ; i++){
+            System.out.print(binaryTreeArray[i] + " ");
+        }
+    }
 }
