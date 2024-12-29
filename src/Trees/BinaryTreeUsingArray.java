@@ -66,4 +66,26 @@ public class BinaryTreeUsingArray {
             System.out.print(binaryTreeArray[i] + " ");
         }
     }
+
+    public int search(String value){                            //Time Complexity : O(N) , Space Complexity: O(1)
+        for (int i=1 ; i<lastUsedIndex; i++ ){
+            if(binaryTreeArray[i] == value){
+                System.out.println("\n The Node " + value + " exists in a tree at index " + i);
+                return i;
+            }
+        }
+        System.out.println("\n The Node " + value + " does not exists in a tree. ");
+        return -1;
+    }
+
+    public void deleteNode(String value){                       //Time Complexity : O(N) , Space Complexity: O(1)
+        int location = search(value);           // find index of node to delete
+        if(location == -1){                     // if not found return
+            return;
+        }else{
+            binaryTreeArray[location] = binaryTreeArray[lastUsedIndex];     // update the value of node to be deleted to deepest node
+            lastUsedIndex--;                                                // delete the deepest node
+            System.out.println("\n The node successfully deleted");
+        }
+    }
 }

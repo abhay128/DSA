@@ -35,5 +35,15 @@ public class Main {
         System.out.println("\n Level-Order Traversal : ");
         binaryTreeUsingArray.levelOrderTraversal();
 
+        binaryTreeUsingArray.search("N5");
+        binaryTreeUsingArray.search("5");
+
+        binaryTreeUsingArray.deleteNode("5");
+        binaryTreeUsingArray.deleteNode("N4");
+
+        System.out.println("\n Level-Order Traversal : ");
+        binaryTreeUsingArray.levelOrderTraversal();
+
+
     }
 }
